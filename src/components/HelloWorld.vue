@@ -15,7 +15,7 @@
                   :data="chartData"
                   :options="chartOptions"
                 />
-                <h3>Daily Sales</h3>
+                <p>Daily Sales</p>
               </div>
             </v-card>
           </v-flex>
@@ -27,7 +27,7 @@
                   :data="chartData"
                   :options="chartOptions"
                 />
-                <h3>Email Subscription</h3>
+                <p>Email Subscription</p>
               </div>
             </v-card>
           </v-flex>
@@ -39,7 +39,7 @@
                   :data="chartData"
                   :options="chartOptions"
                 />
-                <h3>Completed Tasks</h3>
+                <p>Completed Tasks</p>
               </div>
             </v-card>
           </v-flex>
@@ -78,9 +78,9 @@
           <v-flex xs6>
             <v-card>
               <div class="emp_status_head">
-                <h3>Employee Status</h3>
+                <p>Employee Status</p>
               </div>
-              <v-list>
+              <v-list class="emp_list">
                 <v-list-tile
                   v-for="emp in employees"
                   :key="emp.id"
@@ -105,7 +105,7 @@
            <v-flex xs6>
             <v-card class="tabs_card">
               <div class="tasks_head">
-                <h3>Tasks</h3>
+                <p>Tasks</p>
               </div>
               <v-toolbar
                 color="cyan"
@@ -135,7 +135,7 @@
                   :key="item"
                 >
                   <v-card flat>
-                    <v-list>
+                    <v-list class="bugs_list">
                       <v-list-tile v-for="i in 5"
                   :key="i">
                         <v-list-tile-content>
@@ -151,11 +151,11 @@
                         </v-list-tile-content>
 
                         <v-list-tile-content>
-                          <v-list-tile-title><v-icon>edit</v-icon></v-list-tile-title>
+                          <v-list-tile-title><v-icon color="pink">edit</v-icon></v-list-tile-title>
                         </v-list-tile-content>
 
                         <v-list-tile-content>
-                          <v-list-tile-title><v-icon>clear</v-icon></v-list-tile-title>
+                          <v-list-tile-title><v-icon color="red">clear</v-icon></v-list-tile-title>
                         </v-list-tile-content>
 
                       </v-list-tile>
@@ -244,7 +244,7 @@ export default {
   padding: 20px;
 }
 .money_txt, .storage_txt, .err_txt, .social_txt {
-  font-size: 25px;
+  font-size: 20px;
   opacity: 0.6;
   padding-left: 4%;
 }
@@ -252,10 +252,10 @@ export default {
   background-color: #fff;
 }
 .money_tag {
-  font-size: 18px;
+  font-size: 15px;
   opacity: 0.7;
 }
-.chart_div h3 {
+.chart_div p {
   opacity: 0.7;
 }
 .emp_status_head {
@@ -263,16 +263,44 @@ export default {
   background-color: #f5b534;
   text-align: center;
 }
+.emp_status_head p {
+  color: #fff;
+  font-size: 20px;
+}
 .tasks_head {
   padding: 19.5px;
   background-color: #3dcc67;
   text-align: center;
 }
-nav.tabs_toolbar div.v-toolbar__content {
-  height: 10px !important;
+.tasks_head p {
+  font-size: 20px;
+  color: #fff;
 }
 .chart_row {
   margin-top: 2%;
+}
+.chart_row .charts_blk {
+  margin: 10px;
+}
+.v-card {
+  border: 1px solid #ccc;
+}
+.info_row .v-card {
+  margin: 10px;
+}
+.last_row .v-card {
+  margin: 10px;
+}
+.emp_list .v-list__tile__content {
+  opacity: 0.7;
+  font-size: 14px;
+}
+.bugs_list .v-list__tile__content {
+  opacity: 0.7;
+  font-size: 14px;
+}
+.v-toolbar__content {
+  height: 0px !important;
 }
 /*.main_blk {
   background-color: #ccc;

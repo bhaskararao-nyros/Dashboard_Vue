@@ -12,7 +12,7 @@
           </v-list>
         </v-toolbar>
         <v-divider></v-divider>
-        <v-list dense class="pt-0">
+        <v-list dense class="pt-0 side_bar_li">
           <v-list-tile
             v-for="item in items"
             :key="item.title"
@@ -67,6 +67,9 @@ export default {
 .list_li {
   height: 80px !important;
   padding: 10px;
+}
+.side_bar_li .list_li a .v-list__tile__title {
+  font-size: 16px;
 }
 
 </style>
