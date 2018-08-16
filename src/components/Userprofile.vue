@@ -48,7 +48,6 @@
                   required
                 ></v-text-field>
                 <v-btn color="green"
-                  @click="submit"
                 >
                   submit
                 </v-btn>
@@ -95,7 +94,7 @@ export default {
         'Item 2',
         'Item 3',
         'Item 4'
-      ],
+      ]
     }
   },
   components: {
@@ -132,7 +131,7 @@ export default {
   margin-top: 10%;
 }
 .v-card__title {
-  display: block !important; 
+  display: block !important;
 }
 .card_desc {
   text-align: center;

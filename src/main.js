@@ -5,9 +5,16 @@ import App from './App'
 import router from './router'
 import Vuetify from 'vuetify'
 import VueGoogleCharts from 'vue-google-charts'
+import * as VueGoogleMaps from 'vue2-google-maps'
 
 Vue.use(Vuetify)
 Vue.use(VueGoogleCharts)
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyBxBIfFGmL6adUEtytF2IYA10JZjQc5_sk',
+    libraries: 'places'
+  }
+})
 
 Vue.config.productionTip = false
 

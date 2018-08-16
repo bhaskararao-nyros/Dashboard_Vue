@@ -259,7 +259,7 @@ export default {
   opacity: 0.7;
 }
 .emp_status_head {
-  padding: 20px;
+  padding: 15px;
   background-color: #f5b534;
   text-align: center;
 }
@@ -268,7 +268,7 @@ export default {
   font-size: 20px;
 }
 .tasks_head {
-  padding: 19.5px;
+  padding: 15px;
   background-color: #3dcc67;
   text-align: center;
 }
